@@ -1787,7 +1787,7 @@ NlmToLensConverter.Prototype = function() {
     var label = supplement.querySelector("label");
 
     var mediaEl = supplement.querySelector("media");
-    var url = mediaEl ? mediaEl.getAttribute("xlink:href") : null;
+    var url = mediaEl ? mediaEl.getAttribute("xlink:href") : supplement.getAttribute("xlink:href");
     var doi = supplement.querySelector("object-id[pub-id-type='doi']");
     doi = doi ? "http://dx.doi.org/" + doi.textContent : "";
 
@@ -1797,7 +1797,11 @@ NlmToLensConverter.Prototype = function() {
       "source_id": supplement.getAttribute("id"),
       "type": "supplement",
       "label": label ? label.textContent : "",
-      "url": url,
+      "url": [
+        app.config.document_url.substr(0, app.config.document_url.lastIndexOf("/")),
+        '/',
+        url
+        ].join(''),
       "caption": null
     };
 
@@ -2575,7 +2579,8 @@ NlmToLensConverter.Prototype = function() {
     // Just return absolute urls
     if (url.match(/http:/)) return url;
     return [
-      state.options.baseURL,
+      app.config.document_url.substr(0, app.config.document_url.lastIndexOf("/")),
+      '/',
       url
     ].join('');
   };

@@ -71,7 +71,7 @@ Each converter must have a method `test` that takes the XML document as well as 
 See: [lens/converter/elife_converter.js](https://github.com/elifesciences/lens/blob/master/converter/elife_converter.js)
 
 ```js
-ElifeConverter.Prototype = function() {
+IngentaConverter.Prototype = function() {
   ...
   this.test = function(xmlDoc, documentUrl) {
     var publisherName = xmlDoc.querySelector("publisher-name").textContent;
@@ -86,7 +86,7 @@ A customized converter can override any method of the original LensConverter. Ho
 See: [lens/converter/elife_converter.js](https://github.com/elifesciences/lens/blob/master/converter/elife_converter.js)
 
 ```js
-ElifeConverter.Prototype = function() {
+IngentaConverter.Prototype = function() {
   ...
   this.enhanceSupplement = function(state, node) {
     var baseURL = this.getBaseURL(state);
@@ -113,7 +113,7 @@ See [src/my-lens.js](https://github.com/elifesciences/lens-starter/blob/master/s
 LensApp.Prototype = function() {
   this.getConverters = function(converterOptions) {
     return [
-      new ElifeConverter(converterOptions),
+      new IngentaConverter(converterOptions),
       new PLOSConverter(converterOptions),
       new LensConverter(converterOptions)
     ]
