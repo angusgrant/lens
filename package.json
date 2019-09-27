@@ -2,7 +2,7 @@
   "name": "lens",
   "version": "2.1.0",
   "description": "A novel way of seeing content.",
-  "url": "https://github.com/elifesciences/lens",
+  "url": "https://github.com/angusgrant/lens",
   "keywords": [
     "digital documents",
     "linked-data",
@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/elifesciences/lens.git"
+    "url": "git+https://github.com/angusgrant/lens.git"
   },
   "dependencies": {
     "underscore": "1.8.3"
@@ -31,5 +31,14 @@
   "engines": {
     "node": ">=0.8.x",
     "npm": ">=1.1.x"
+  },
+  "bugs": {
+    "url": "https://github.com/elifesciences/lens/issues"
+  },
+  "homepage": "https://github.com/elifesciences/lens#readme",
+  "main": "y",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
