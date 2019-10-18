@@ -314,10 +314,10 @@ Lens uses gulp and browserify for bundling. Just run the `gulp` command.
 $ gulp
 ```
 
-You can find your bundle in the `dist` folder.
+You can find your bundle in the `lib` folder.
 
 ```bash
-$ cd dist
+$ cd lib
 $ python -m SimpleHTTPServer
 ```
 
