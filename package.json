@@ -26,7 +26,7 @@
     "url": "git+https://github.com/angusgrant/lens.git"
   },
   "dependencies": {
-    "underscore": "1.8.3"
+    "underscore": "1.12.1"
   },
   "engines": {
     "node": ">=0.8.x",
